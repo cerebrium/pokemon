@@ -1,0 +1,11 @@
+<h1>Results</h1>
+
+
+<ul>
+    <% for (i=0; i < pokemon.results.length; i++) { %>
+        <li>
+            <a href="results/singleresults/<%= pokemon.results[i].url %>"><%= pokemon.results[i].name %></a>
+        </li>
+        
+    <% }%>
+</ul>

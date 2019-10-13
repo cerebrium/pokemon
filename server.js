@@ -4,9 +4,15 @@ const layouts = require('express-ejs-layouts');
 
 app.set('view engine', 'ejs');
 
+// app.use(express.urlencoded({extended: false}))
+
+app.use(layouts);
+
 app.get(`/`, function(req, res) {
-    res.send('HOME PAGE')
+    res.render(`home`);
 })
+
+app.use(`/results`, require(`./routes/results`))
 
 app.listen(3010, function() {
     console.log('server running')
