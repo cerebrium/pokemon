@@ -29,7 +29,7 @@ app.get(`/deletePage/:id`, function(req, res) {
         },
     })
     .then(function(deleted) {
-        res.render('deletePage')
+        res.redirect('/favorites')
     })
     
 })

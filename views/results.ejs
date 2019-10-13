@@ -1,10 +1,10 @@
-<h1>Results</h1>
+<h1 style="color: cornsilk;">Results</h1>
 
 
 <ul>
     <% for (i=0; i < pokemon.results.length; i++) { %>
         <li>
-            <a href="results/singleresults/<%= pokemon.results[i].name %>"><%= pokemon.results[i].name %></a>
+            <a href="results/singleresults/<%= pokemon.results[i].name %>" style="text-decoration: none;"><%= pokemon.results[i].name %></a>
         </li>
         
     <% }%>

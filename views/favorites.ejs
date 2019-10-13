@@ -1,11 +1,11 @@
-<h1>some faves bruh-beans</h1>
+<h1 style="color: cornsilk;">Here Are Your Favorite Pokemon</h1>
 
 
 <ul>
     <% topPoke.forEach(function(ele, id) { %>
         <li>
-            <a href="results/singleresults/<%= ele.name %>" style="font-size: 2em; text-decoration: none;"><%= ele.name %>        </a> 
-            <a href="deletePage/<%= ele.name %>" style="border: solid black 3px; background-color: black; color: aliceblue; border-radius: 10px;"> To Delete Click Here!</a>
+            <a href="results/singleresults/<%= ele.name %>" style="font-size: 2em; text-decoration: none;color: rgb(44, 38, 38);"><%= ele.name %>        </a> 
+            <a href="deletePage/<%= ele.name %>" style="border: solid black 3px; background-color: black; color: aliceblue; border-radius: 10px; text-decoration: none;"> To Delete Click Here!</a>
         </li>
     <% }) %>
 </ul>
