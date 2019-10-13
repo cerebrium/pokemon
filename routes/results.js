@@ -26,8 +26,6 @@ router.get(`/singleresults/:id`, function(req, res) {
     })
 })
 
-
-
 module.exports = router;
 
 

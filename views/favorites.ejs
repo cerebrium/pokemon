@@ -1,7 +1,14 @@
 <h1>some faves bruh-beans</h1>
 
+
 <ul>
     <% topPoke.forEach(function(ele, id) { %>
-        <li><a href="results/singleresults/<%= ele.name %>"><%= ele.name %></a></li>
+        <li>
+            <a href="results/singleresults/<%= ele.name %>" style="font-size: 2em; text-decoration: none;"><%= ele.name %>        </a> 
+            <a href="deletePage/<%= ele.name %>" style="border: solid black 3px; background-color: black; color: aliceblue; border-radius: 10px;"> To Delete Click Here!</a>
+        </li>
     <% }) %>
 </ul>
+
+
+

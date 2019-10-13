@@ -19,8 +19,19 @@ app.get(`/favorites`, function(req, res) {
     db.pokemon.findAll()
     .then(function(favoritesPokeStyle) {
         res.render('favorites', {topPoke: favoritesPokeStyle})
-        console.log(favoritesPokeStyle)
     })
+})
+
+app.get(`/deletePage/:id`, function(req, res) {
+    db.pokemon.destroy({
+        where : {
+            name : req.params.id
+        },
+    })
+    .then(function(deleted) {
+        res.render('deletePage')
+    })
+    
 })
 
 app.post(`/favorites`, function(req, res) {
