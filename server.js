@@ -1,6 +1,7 @@
 const express = require('express');
 const app = express();
 const layouts = require('express-ejs-layouts');
+const db = require(`./models`)
 
 app.set('view engine', 'ejs');
 

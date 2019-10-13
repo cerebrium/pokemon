@@ -4,7 +4,6 @@ const axios = require('axios');
 
 const BASE_URL = 'http://pokeapi.co/api/v2/pokemon/';
 
-
 router.get(`/`, function(req, res) {
     axios.get(BASE_URL, {
         params : {
@@ -15,20 +14,18 @@ router.get(`/`, function(req, res) {
 
     })
     .then(function (pokeResults) {
-        res.render(`result`, {pokemon : pokeResults.data})
+        res.render(`results`, {pokemon : pokeResults.data})
         console.log(pokeResults.data)
     })
 })
 
-router.get(`/https://pokeapi.co/api/v2/pokemon/:id`, function(req, res) {
-    axios.get(BASE_URL, {
-        params : {
-            id : req.params.id,
-        },
-    })
+router.get(`/singleresults/:id`, function(req, res) {
+    let inputHere = req.params.id;
+    axios.get(`http://pokeapi.co/api/v2/pokemon/${inputHere}`, {})
     .then(function(pokeresult) {
-        res.render(`singleresults`, {pokemon : pokeresult})
-        console.log(pokeresult)
+        res.render(`singleresults`, {pokemon : pokeresult.data})
+        console.log(req.params.id)
+        console.log(pokeresult.data)
     })
 })
 
