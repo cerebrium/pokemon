@@ -2,3 +2,8 @@
 
 <img src="<%= pokemon.sprites.front_default %>" alt="" style="width: 15%; height: 15%;">
 
+<form action="/favorites" method="post">
+    <input type="hidden" name='pokeName' value='<%= pokemon.name %>'>
+    <input type='submit' value='push to favorites'>
+</form>
+

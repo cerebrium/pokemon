@@ -15,7 +15,6 @@ router.get(`/`, function(req, res) {
     })
     .then(function (pokeResults) {
         res.render(`results`, {pokemon : pokeResults.data})
-        console.log(pokeResults.data)
     })
 })
 
@@ -24,8 +23,6 @@ router.get(`/singleresults/:id`, function(req, res) {
     axios.get(`http://pokeapi.co/api/v2/pokemon/${inputHere}`, {})
     .then(function(pokeresult) {
         res.render(`singleresults`, {pokemon : pokeresult.data})
-        console.log(req.params.id)
-        console.log(pokeresult.data)
     })
 })
 
